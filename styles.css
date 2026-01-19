@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background: #1E201E;
     color: #ECDFCC;
 }
-.header{
+
+.header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -21,13 +24,15 @@ body{
     align-items: center;
     z-index: 100;
 }
-.logo{
+
+.logo {
     font-weight: 600;
     font-size: 25px;
     text-decoration: none;
     color: #ECDFCC;
 }
-.navbar a{
+
+.navbar a {
     font-size: 18px;
     font-weight: 500;
     color: #ECDFCC;
@@ -35,32 +40,99 @@ body{
     margin-left: 35px;
     transition: .3s;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     color: #00abf0;
 }
-.navbar a.active{
+
+.navbar a.active {
     color: #00abf0;
 }
-/* .home{
-    display: flex;
-    align-items: center;
-    height: 100vh;
-    padding: 0 10%;
-} */
- .home{
+
+.home {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    padding: 0 10%;
+    min-height: 100vh;
+    padding: 100px 10% 0;
+    gap: 50px;
 }
 
-.home-content{
+.home-content {
+    flex: 1;
     max-width: 600px;
 }
 
+.home-content h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.home-content p {
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.btn {
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: none;
+    border: 2px solid #646cff;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-2 {
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: none;
+    border: 2px solid #646cff;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.liquid {
+    background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, 0.2em);
+    transition: 0.3s var(--t, 0s), background-position 0.3s calc(0.3s - var(--t, 0s));
+}
+
+.liquid:hover {
+    --p: 100%;
+    --t: 0.3s;
+    color: #fff;
+}
+
+.buton {
+    display: flex;
+    gap: 20px;
+}
+
 .hero-image {
-    width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-image img {
@@ -68,94 +140,20 @@ body{
     max-width: 500px;
     height: auto;
 }
-.home-content{
-    max-width: 600px;
-}
-.home-content h1{
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.2;
-}
-.home-content h3{
-    font-size: 32px;
-    font-weight: 700;
-    color: #00abf0;
-}
-.home-content p {
-    font-size: 16px;
-    margin: 20px 0 40px;
-}
-/* .btn-box{
-    display: flex;
-    width: 345px;
-    height: 50px;
-    justify-content: space-between;
-    /* background: yellowgreen; */
 
-/* .btn-box a{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
-    height: 100%;
-    background: #00abf0;
-    border: 2px solid #00abf0;
-    border-radius: 8px;
-    font-size: 19px;
-    color: #1E201E;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px; 
-    z-index: 1;
-} */
-.btn {
-  position: relative;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  background: none;
-  border: 2px solid #646cff;
-  border-radius: 8px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  gap: 1em;
-}
-.btn-2 {
-  position: relative;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: white;
-  background: none;
-  border: 2px solid #646cff;
-  border-radius: 8px;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  gap: 1em;
-}
-.liquid {
-  background: linear-gradient(#646cff 0 0) no-repeat calc(200% - var(--p, 0%))
-    100% / 200% var(--p, 0.2em);
-  transition: 0.3s var(--t, 0s),
-    background-position 0.3s calc(0.3s - var(--t, 0s));
-}
-
-.liquid:hover {
-  --p: 100%;
-  --t: 0.3s;
-  color: #fff;
-}
-.buton{
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    width: 23vw;
-    height: 100%;
-    align-items: center;
+/* Responsive */
+@media (max-width: 968px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+        padding: 150px 10% 50px;
+    }
+    
+    .buton {
+        justify-content: center;
+    }
+    
+    .hero-image img {
+        max-width: 350px;
+    }
 }
