@@ -133,12 +133,30 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+/* Circular background container */
+.hero-image::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: #1A1A1A;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 10px 40px rgba(26, 26, 26, 0.5);
 }
 
 .hero-image img {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
     height: auto;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive */
@@ -153,7 +171,12 @@ body {
         justify-content: center;
     }
     
+    .hero-image::before {
+        width: 300px;
+        height: 300px;
+    }
+    
     .hero-image img {
-        max-width: 350px;
+        max-width: 260px;
     }
 }
